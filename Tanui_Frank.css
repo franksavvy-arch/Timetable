@@ -1,0 +1,79 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+  
+.timetable-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 1200px; /* Fixed width for the timetable */
+    margin: 0 auto; /* Centering the container */
+}
+
+table.timetable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+}
+
+table.timetable th,
+table.timetable td {
+    border: 1px solid #000;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+table.timetable th:nth-child(1), /* Days column */
+table.timetable td:nth-child(1) {
+    width: 10%; /* Narrow width for days */
+}
+
+table.timetable th:nth-child(n+2):nth-child(-n+14), /* Time slots columns */
+table.timetable td:nth-child(n+2):nth-child(-n+14) {
+    width: 6%; /* Equal width for time slots */
+}
+
+table.timetable th:nth-child(15), /* Breaks, lunch, and end activities */
+table.timetable td:nth-child(15),
+table.timetable th:nth-child(16),
+table.timetable td:nth-child(16) {
+    width: 8%; /* Narrower width for breaks/lunch/activities */
+}
+
+table.timetable th {
+    background-color: #d3d3d3;
+    font-weight: bold;
+}
+
+table.timetable tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+table.timetable td[colspan] {
+    background-color: #ffeb3b;
+    font-weight: bold;
+}
+
+table.timetable td[rowspan] {
+    background-color: #bbdefb;
+    font-weight: bold;
+}
+
+/* Highlight specific sections */
+.break {
+    background-color: #f8d7da;
+}
+
+.lunch {
+    background-color: #d1ecf1;
+}
+
+.end-activities {
+    background-color: #d4edda;
+}
